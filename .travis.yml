@@ -1,3 +1,2 @@
 language: objective-c
-xcode_project: Example.xcodeproj
-xcode_scheme: QRCodeTests
+script: xctool -scheme QRCodeTests -sdk iphonesimulator build test
