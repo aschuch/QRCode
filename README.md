@@ -14,7 +14,7 @@ The following examples all result in the same QRCode image.
 ```swift
 // NSURL
 let url = NSURL(string: "http://schuch.me")
-qrCode = QRCode("http://schuch.me")
+qrCode = QRCode(url)
 qrCode?.image
 
 // String
