@@ -1,5 +1,7 @@
 # QRCode 🔳
 
+[![Build Status](https://travis-ci.org/aschuch/QRCode.svg)](https://travis-ci.org/aschuch/QRCode)
+
 A QRCode generator written in Swift.
 
 ![QRCode Example](Resources/example.png)
