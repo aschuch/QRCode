@@ -275,7 +275,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4D248F021A751C3700E44E6B /* Build configuration list for PBXProject "Example" */;
+			buildConfigurationList = 4D248F021A751C3700E44E6B /* Build configuration list for PBXProject "QRCode" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -567,7 +567,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4D248F021A751C3700E44E6B /* Build configuration list for PBXProject "Example" */ = {
+		4D248F021A751C3700E44E6B /* Build configuration list for PBXProject "QRCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D248F241A751C3700E44E6B /* Debug */,
