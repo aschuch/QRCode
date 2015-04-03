@@ -18,3 +18,7 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+
+# Carthage
+Carthage/Checkouts
+Carthage/Build
