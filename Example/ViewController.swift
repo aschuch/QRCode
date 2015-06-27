@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         imageViewLarge.image = {
             var qrCode = QRCode("http://github.com/aschuch/QRCode")!
             qrCode.size = self.imageViewLarge.bounds.size
+            qrCode.errorCorrection = .High
             return qrCode.image
         }()
         
