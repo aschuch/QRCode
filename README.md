@@ -1,8 +1,6 @@
 # QRCode 🔳
 
-<!--
 [![Build Status](https://travis-ci.org/aschuch/QRCode.svg)](https://travis-ci.org/aschuch/QRCode)
--->
 ![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
 
 A QRCode generator written in Swift.
