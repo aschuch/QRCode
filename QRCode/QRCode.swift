@@ -13,6 +13,21 @@ public typealias 🔳 = QRCode
 /// QRCode generator
 public struct QRCode {
     
+    /**
+    The level of error correction.
+    
+    - Low:      7%
+    - Medium:   15%
+    - Quartile: 25%
+    - High:     30%
+    */
+    public enum ErrorCorrection: String {
+        case Low = "L"
+        case Medium = "M"
+        case Quartile = "Q"
+        case High = "H"
+    }
+    
     /// CIQRCodeGenerator generates 27x27px images per default
     private let DefaultQRCodeSize = CGSize(width: 27, height: 27)
     
@@ -30,6 +45,8 @@ public struct QRCode {
     /// Size of the output
     public var size = CGSize(width: 200, height: 200)
     
+    /// The error correction. The default value is `.Low`.
+    public var errorCorrection = ErrorCorrection.Low
 
     // MARK: Init
     
@@ -66,6 +83,7 @@ public struct QRCode {
         let qrFilter = CIFilter(name: "CIQRCodeGenerator")
         qrFilter.setDefaults()
         qrFilter.setValue(data, forKey: "inputMessage")
+        qrFilter.setValue(self.errorCorrection.rawValue, forKey: "inputCorrectionLevel")
         
         // Color code and background
         let colorFilter = CIFilter(name: "CIFalseColor")
