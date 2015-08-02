@@ -29,7 +29,7 @@ public extension CIColor {
         var hexValue: CUnsignedLongLong = 0
         
         if scanner.scanHexLongLong(&hexValue) {
-            let length = count(rgba)
+            let length = rgba.characters.count
             
             switch (length) {
             case 3:
@@ -51,11 +51,11 @@ public extension CIColor {
                 b = CGFloat((hexValue & 0x0000FF00) >> 8)   / 255.0
                 a = CGFloat(hexValue & 0x000000FF)          / 255.0
             default:
-                println("Invalid number of values (\(length)) in HEX string. Make sure to enter 3, 4, 6 or 8 values. E.g. `aabbccff`")
+                print("Invalid number of values (\(length)) in HEX string. Make sure to enter 3, 4, 6 or 8 values. E.g. `aabbccff`")
             }
             
         } else {
-            println("Invalid HEX value: \(rgba)")
+            print("Invalid HEX value: \(rgba)")
         }
         
         self.init(red: r, green: g, blue: b, alpha: a)

@@ -36,11 +36,11 @@ public struct QRCode {
     
     /// Foreground color of the output
     /// Defaults to black
-    public var color = CIColor(red: 0, green: 0, blue: 0)
+    public var color = CIColor(color: UIColor.blackColor())
     
     /// Background color of the output
     /// Defaults to white
-    public var backgroundColor = CIColor(red: 1, green: 1, blue: 1)
+    public var backgroundColor = CIColor(color: UIColor.whiteColor())
     
     /// Size of the output
     public var size = CGSize(width: 200, height: 200)
@@ -63,7 +63,7 @@ public struct QRCode {
     }
     
     public init?(_ url: NSURL) {
-        if let data = url.absoluteString?.dataUsingEncoding(NSISOLatin1StringEncoding) {
+        if let data = url.absoluteString.dataUsingEncoding(NSISOLatin1StringEncoding) {
             self.data = data
         } else {
             return nil
@@ -74,29 +74,29 @@ public struct QRCode {
     
     /// The QRCode's UIImage representation
     public var image: UIImage {
-        return UIImage(CIImage: ciImage)!
+        return UIImage(CIImage: ciImage)
     }
     
     /// The QRCode's CIImage representation
     public var ciImage: CIImage {
         // Generate QRCode
         let qrFilter = CIFilter(name: "CIQRCodeGenerator")
-        qrFilter.setDefaults()
-        qrFilter.setValue(data, forKey: "inputMessage")
-        qrFilter.setValue(self.errorCorrection.rawValue, forKey: "inputCorrectionLevel")
+        qrFilter!.setDefaults()
+        qrFilter!.setValue(data, forKey: "inputMessage")
+        qrFilter!.setValue(self.errorCorrection.rawValue, forKey: "inputCorrectionLevel")
         
         // Color code and background
         let colorFilter = CIFilter(name: "CIFalseColor")
-        colorFilter.setDefaults()
-        colorFilter.setValue(qrFilter.outputImage, forKey: "inputImage")
-        colorFilter.setValue(color, forKey: "inputColor0")
-        colorFilter.setValue(backgroundColor, forKey: "inputColor1")
+        colorFilter!.setDefaults()
+        colorFilter!.setValue(qrFilter!.outputImage, forKey: "inputImage")
+        colorFilter!.setValue(color, forKey: "inputColor0")
+        colorFilter!.setValue(backgroundColor, forKey: "inputColor1")
         
         // Size
         let sizeRatioX = size.width / DefaultQRCodeSize.width
         let sizeRatioY = size.height / DefaultQRCodeSize.height
         let transform = CGAffineTransformMakeScale(sizeRatioX, sizeRatioY)
-        let transformedImage = colorFilter.outputImage.imageByApplyingTransform(transform)
+        let transformedImage = colorFilter!.outputImage.imageByApplyingTransform(transform)
         
         return transformedImage
     }
