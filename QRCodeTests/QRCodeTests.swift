@@ -16,14 +16,14 @@ class QRCodeTests: XCTestCase {
         let qrCode = QRCode("hello")
         
         XCTAssert(qrCode != nil, "QRCode is nil")
-        XCTAssertEqual(CIColor(red: 0, green: 0, blue: 0), qrCode!.color, "Initial color is not black")
-        XCTAssertEqual(CIColor(red: 1, green: 1, blue: 1), qrCode!.backgroundColor, "Initial backgroundColor is not white")
+        XCTAssertEqual(CIColor(color: UIColor.blackColor()), qrCode!.color, "Initial color is not black")
+        XCTAssertEqual(CIColor(color: UIColor.whiteColor()), qrCode!.backgroundColor, "Initial backgroundColor is not white")
         XCTAssertEqual(CGSize(width: 200, height: 200), qrCode!.size, "Initial size is not 200x200")
     }
     
     func testInitWithData() {
         let data = "hello".dataUsingEncoding(NSISOLatin1StringEncoding)!
-        var qrCode = QRCode(data)
+        let qrCode = QRCode(data)
         
         XCTAssertEqual(data, qrCode.data, "data is not equal")
     }
@@ -31,7 +31,7 @@ class QRCodeTests: XCTestCase {
     func testInitWithString() {
         let string = "hello"
         let data = string.dataUsingEncoding(NSISOLatin1StringEncoding)!
-        var qrCode = QRCode(string)
+        let qrCode = QRCode(string)
         
         XCTAssert(qrCode != nil, "QRCode is nil")
         XCTAssertEqual(data, qrCode!.data, "data is not equal")
@@ -39,16 +39,16 @@ class QRCodeTests: XCTestCase {
 
     func testInitWithURL() {
         let url = NSURL(string: "http://example.com")!
-        let data = url.absoluteString!.dataUsingEncoding(NSISOLatin1StringEncoding)!
-        var qrCode = QRCode(url)
+        let data = url.absoluteString.dataUsingEncoding(NSISOLatin1StringEncoding)!
+        let qrCode = QRCode(url)
         
         XCTAssert(qrCode != nil, "QRCode is nil")
         XCTAssertEqual(data, qrCode!.data, "data is not equal")
     }
     
     func testColor() {
-        let red = CIColor(red: 1, green: 0, blue: 0)
-        let blue = CIColor(red: 0, green: 0, blue: 1)
+        let red = CIColor(color: UIColor.redColor())
+        let blue = CIColor(color: UIColor.blueColor())
         
         var qrCode = QRCode("hello")
         qrCode?.color = red
