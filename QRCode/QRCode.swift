@@ -11,7 +11,7 @@ import UIKit
 public typealias 🔳 = QRCode
 
 /// QRCode generator
-@available(iOS 9.0, *)
+@available(iOS 8.2, *)
 public struct QRCode {
     
     /**
