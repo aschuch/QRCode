@@ -12,7 +12,8 @@ public extension UIImageView {
     
     /// Creates a new image view with the given QRCode
     ///
-    /// :param: qrCode      The QRCode to display in the image view
+    /// - parameter qrCode:      The QRCode to display in the image view
+    @available(iOS 9.0, *)
     public convenience init(qrCode: QRCode) {
         self.init(image: qrCode.image)
     }
