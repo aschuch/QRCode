@@ -74,7 +74,7 @@ public struct QRCode {
     
     /// The QRCode's UIImage representation
     public var image: UIImage {
-        return UIImage(CIImage: ciImage)!
+        return UIImage(CIImage: ciImage)
     }
     
     /// The QRCode's CIImage representation
