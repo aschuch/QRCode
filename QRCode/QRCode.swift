@@ -96,7 +96,7 @@ public struct QRCode {
         let sizeRatioX = size.width / DefaultQRCodeSize.width
         let sizeRatioY = size.height / DefaultQRCodeSize.height
         let transform = CGAffineTransformMakeScale(sizeRatioX, sizeRatioY)
-        let transformedImage = colorFilter.outputImage.imageByApplyingTransform(transform)
+        let transformedImage = colorFilter.outputImage!.imageByApplyingTransform(transform)
         
         return transformedImage
     }
