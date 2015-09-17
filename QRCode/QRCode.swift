@@ -80,13 +80,13 @@ public struct QRCode {
     /// The QRCode's CIImage representation
     public var ciImage: CIImage {
         // Generate QRCode
-        let qrFilter = CIFilter(name: "CIQRCodeGenerator")
+        let qrFilter = CIFilter(name: "CIQRCodeGenerator")!
         qrFilter.setDefaults()
         qrFilter.setValue(data, forKey: "inputMessage")
         qrFilter.setValue(self.errorCorrection.rawValue, forKey: "inputCorrectionLevel")
         
         // Color code and background
-        let colorFilter = CIFilter(name: "CIFalseColor")
+        let colorFilter = CIFilter(name: "CIFalseColor")!
         colorFilter.setDefaults()
         colorFilter.setValue(qrFilter.outputImage, forKey: "inputImage")
         colorFilter.setValue(color, forKey: "inputColor0")
