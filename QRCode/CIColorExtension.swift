@@ -29,7 +29,7 @@ public extension CIColor {
         var hexValue: CUnsignedLongLong = 0
         
         if scanner.scanHexLongLong(&hexValue) {
-            let length = count(rgba)
+            let length = rgba.characters.count
             
             switch (length) {
             case 3:
