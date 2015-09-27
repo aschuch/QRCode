@@ -73,21 +73,21 @@ public struct QRCode {
     // MARK: Generate QRCode
     
     /// The QRCode's UIImage representation
-    public var image: UIImage {
-        return UIImage(CIImage: ciImage)
+    public var image: UIImage? {
+        return UIImage(CIImage: ciImage!)
     }
     
     /// The QRCode's CIImage representation
-    public var ciImage: CIImage {
+    public var ciImage: CIImage? {
         // Generate QRCode
-        guard let qrFilter = CIFilter(name: "CIQRCodeGenerator") else { return CIImage() }
+        guard let qrFilter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
         
         qrFilter.setDefaults()
         qrFilter.setValue(data, forKey: "inputMessage")
         qrFilter.setValue(self.errorCorrection.rawValue, forKey: "inputCorrectionLevel")
         
         // Color code and background
-        guard let colorFilter = CIFilter(name: "CIFalseColor") else { return CIImage() }
+        guard let colorFilter = CIFilter(name: "CIFalseColor") else { return nil }
         
         colorFilter.setDefaults()
         colorFilter.setValue(qrFilter.outputImage, forKey: "inputImage")
@@ -98,7 +98,7 @@ public struct QRCode {
         let sizeRatioX = size.width / DefaultQRCodeSize.width
         let sizeRatioY = size.height / DefaultQRCodeSize.height
         let transform = CGAffineTransformMakeScale(sizeRatioX, sizeRatioY)
-        guard let transformedImage = colorFilter.outputImage?.imageByApplyingTransform(transform) else { return CIImage() }
+        guard let transformedImage = colorFilter.outputImage?.imageByApplyingTransform(transform) else { return nil }
         
         return transformedImage
     }
