@@ -47,7 +47,7 @@ public struct QRCode {
     
     /// The error correction. The default value is `.Low`.
     public var errorCorrection = ErrorCorrection.Low
-
+    
     // MARK: Init
     
     public init(_ data: NSData) {
@@ -63,30 +63,33 @@ public struct QRCode {
     }
     
     public init?(_ url: NSURL) {
-        if let data = url.absoluteString?.dataUsingEncoding(NSISOLatin1StringEncoding) {
+        if let data = url.absoluteString.dataUsingEncoding(NSISOLatin1StringEncoding) {
             self.data = data
         } else {
             return nil
         }
     }
-
+    
     // MARK: Generate QRCode
     
     /// The QRCode's UIImage representation
-    public var image: UIImage {
-        return UIImage(CIImage: ciImage)!
+    public var image: UIImage? {
+        guard let ciImage = ciImage else { return nil }
+        return UIImage(CIImage: ciImage)
     }
     
     /// The QRCode's CIImage representation
-    public var ciImage: CIImage {
+    public var ciImage: CIImage? {
         // Generate QRCode
-        let qrFilter = CIFilter(name: "CIQRCodeGenerator")
+        guard let qrFilter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
+        
         qrFilter.setDefaults()
         qrFilter.setValue(data, forKey: "inputMessage")
         qrFilter.setValue(self.errorCorrection.rawValue, forKey: "inputCorrectionLevel")
         
         // Color code and background
-        let colorFilter = CIFilter(name: "CIFalseColor")
+        guard let colorFilter = CIFilter(name: "CIFalseColor") else { return nil }
+        
         colorFilter.setDefaults()
         colorFilter.setValue(qrFilter.outputImage, forKey: "inputImage")
         colorFilter.setValue(color, forKey: "inputColor0")
@@ -96,7 +99,7 @@ public struct QRCode {
         let sizeRatioX = size.width / DefaultQRCodeSize.width
         let sizeRatioY = size.height / DefaultQRCodeSize.height
         let transform = CGAffineTransformMakeScale(sizeRatioX, sizeRatioY)
-        let transformedImage = colorFilter.outputImage.imageByApplyingTransform(transform)
+        guard let transformedImage = colorFilter.outputImage?.imageByApplyingTransform(transform) else { return nil }
         
         return transformedImage
     }
