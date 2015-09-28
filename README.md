@@ -86,7 +86,7 @@ Then run `carthage update`.
 Add the following line to your Podfile.
 
 ```
-pod "QRCode", "~> 0.1"
+pod "QRCode", "~> 0.5"
 ```
 
 Then run `pod install` with Cocoapods 0.36 or newer.
