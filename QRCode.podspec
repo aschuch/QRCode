@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.author            = { "Alexander Schuch" => "alexander@schuch.me" }
   s.social_media_url  = "http://twitter.com/schuchalexander"
   s.platform          = :ios, "8.0"
+  s.platform          = :tvos, "9.0"
   s.source            = { :git => "https://github.com/aschuch/QRCode.git", :tag => s.version }
   s.requires_arc      = true
   s.source_files      = "QRCode/QRCode.swift", "QRCode/UIImageViewExtension.swift", "QRCode/CIColorExtension.swift"
