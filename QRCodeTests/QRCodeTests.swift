@@ -80,4 +80,40 @@ class QRCodeTests: XCTestCase {
         XCTAssertEqual(size, qrCode!.size, "size is not equal")
     }
     
+    func testScale() {
+        var scale = Scale(x: 20, y: 30)
+        
+        XCTAssertEqual(scale.x, 20, "scale x is not equal")
+        XCTAssertEqual(scale.y, 30, "scale y is not equal")
+        XCTAssertEqual(scale.width, 20, "scale width is not equal")
+        XCTAssertEqual(scale.height, 30, "scale height is not equal")
+        
+        scale.width = 40
+        scale.height = 60
+        
+        XCTAssertEqual(scale.x, 40, "scale x is not equal")
+        XCTAssertEqual(scale.y, 60, "scale y is not equal")
+        XCTAssertEqual(scale.width, 40, "scale width is not equal")
+        XCTAssertEqual(scale.height, 60, "scale height is not equal")
+        
+        let scale2 = Scale(25)
+        
+        XCTAssertEqual(scale2.x, 25, "scale x is not equal")
+        XCTAssertEqual(scale2.y, 25, "scale y is not equal")
+        XCTAssertEqual(scale2.width, 25, "scale width is not equal")
+        XCTAssertEqual(scale2.height, 25, "scale height is not equal")
+    }
+    
+    func testImageSize() {
+        let size = CGSize(width: 100, height: 100)
+        
+        var qrCode = QRCode("hello")
+        qrCode?.size = size
+        
+        let image = qrCode?.image
+        
+        XCTAssert(qrCode != nil, "QRCode is nil")
+        XCTAssert(image != nil, "image is nil")
+        XCTAssertEqual(image!.size, size)
+    }
 }
