@@ -21,8 +21,14 @@ internal extension CIImage {
         
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()
+        
         CGContextSetInterpolationQuality(context, .None)
+        
+        CGContextTranslateCTM(context, 0, size.height)
+        CGContextScaleCTM(context, 1.0, -1.0)
+        
         CGContextDrawImage(context, CGContextGetClipBoundingBox(context), cgImage)
+        
         let result = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
