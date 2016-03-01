@@ -28,6 +28,8 @@ class ViewController: UIViewController {
             var qrCode = QRCode("http://github.com/aschuch/QRCode")!
             qrCode.size = self.imageViewLarge.bounds.size
             qrCode.errorCorrection = .High
+            qrCode.logo = UIImage(named: "UbuntuLogo")
+            qrCode.logoSize = CGSize(width: 80, height: 80)
             return qrCode.image
         }()
         

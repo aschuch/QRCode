@@ -48,6 +48,12 @@ public struct QRCode {
     /// The error correction. The default value is `.Low`.
     public var errorCorrection = ErrorCorrection.Low
     
+    /// Logo of company
+    public var logo: UIImage?
+    
+    /// Size of logo
+    public var logoSize = CGSize(width: 50, height: 50)
+    
     // MARK: Init
     
     public init(_ data: NSData) {
@@ -75,7 +81,11 @@ public struct QRCode {
     /// The QRCode's UIImage representation
     public var image: UIImage? {
         guard let ciImage = ciImage else { return nil }
-        return UIImage(CIImage: ciImage)
+        let _image = UIImage(CIImage: ciImage)
+        guard let logo = logo else {
+            return _image
+        }
+        return drawLogo(_image, logoImage: logo, logoSize: logoSize)
     }
     
     /// The QRCode's CIImage representation
@@ -104,4 +114,18 @@ public struct QRCode {
         return transformedImage
     }
     
+    //draw logo in qrcode image
+    private func drawLogo(qrImage: UIImage, logoImage: UIImage, logoSize: CGSize) -> UIImage {
+        let rect = CGRectMake(0, 0, qrImage.size.width, qrImage.size.height)
+        UIGraphicsBeginImageContext(rect.size)
+        qrImage.drawInRect(rect)
+        
+        let x = (rect.width - logoSize.width) * 0.5
+        let y = (rect.height - logoSize.height) * 0.5
+        logoImage.drawInRect(CGRectMake(x, y, logoSize.width, logoSize.height))
+        
+        let result = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return result
+    }
 }
