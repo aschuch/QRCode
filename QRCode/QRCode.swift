@@ -75,7 +75,15 @@ public struct QRCode {
     /// The QRCode's UIImage representation
     public var image: UIImage? {
         guard let ciImage = ciImage else { return nil }
-        return UIImage(CIImage: ciImage)
+        
+        //These lines do fix the UIImagePNGRepresentation() nil problem while fetching NSData from this UIImage
+        let image = UIImage(CIImage: ciImage)
+        UIGraphicsBeginImageContext(image.size)
+        image.drawInRect(CGRectMake(0, 0, image.size.width, image.size.height))
+        let convertibleImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return convertibleImage
     }
     
     /// The QRCode's CIImage representation
