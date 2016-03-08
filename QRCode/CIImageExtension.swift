@@ -8,6 +8,8 @@
 
 import Foundation
 
+internal typealias Scale = (dx: CGFloat, dy: CGFloat)
+
 internal extension CIImage {
     
     /// Creates an `UIImage` with interpolation disabled and scaled given a scale property
@@ -15,9 +17,9 @@ internal extension CIImage {
     /// - parameter withScale:  a given scale using to resize the result image
     ///
     /// - returns: an non-interpolated UIImage
-    internal func nonInterpolatedImage(withScale scale: Scale = Scale(1)) -> UIImage {
+    internal func nonInterpolatedImage(withScale scale: Scale = Scale(dx: 1, dy: 1)) -> UIImage {
         let cgImage = CIContext(options: nil).createCGImage(self, fromRect: self.extent)
-        let size = CGSize(width: self.extent.size.width * scale.width, height: self.extent.size.height * scale.height)
+        let size = CGSize(width: self.extent.size.width * scale.dx, height: self.extent.size.height * scale.dy)
         
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()
@@ -33,10 +35,5 @@ internal extension CIImage {
         UIGraphicsEndImageContext()
         
         return result
-    }
-    
-    /// Convenience methods for `nonInterpolatedImage(withScale scale: Scale)` method
-    internal func nonInterpolatedImage(withScale scale: CGFloat) -> UIImage {
-        return self.nonInterpolatedImage(withScale: Scale(scale))
     }
 }

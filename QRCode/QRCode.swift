@@ -78,7 +78,7 @@ public struct QRCode {
         let widthRatio = size.width / ciImageSize.width
         let heightRatio = size.height / ciImageSize.height
         
-        return ciImage.nonInterpolatedImage(withScale: Scale(width: widthRatio, height: heightRatio))
+        return ciImage.nonInterpolatedImage(withScale: Scale(dx: widthRatio, dy: heightRatio))
     }
     
     /// The QRCode's CIImage representation
