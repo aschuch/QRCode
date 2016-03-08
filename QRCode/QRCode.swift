@@ -75,7 +75,9 @@ public struct QRCode {
     /// The QRCode's UIImage representation
     public var image: UIImage? {
         guard let ciImage = ciImage else { return nil }
-        return UIImage(CIImage: ciImage)
+        let context = CIContext(options: nil)
+        let cgimage = context.createCGImage(ciImage, fromRect: ciImage.extent)
+        return UIImage(CGImage: cgimage)
     }
     
     /// The QRCode's CIImage representation
