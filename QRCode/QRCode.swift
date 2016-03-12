@@ -28,9 +28,6 @@ public struct QRCode {
         case High = "H"
     }
     
-    /// CIQRCodeGenerator generates 27x27px images per default
-    private let DefaultQRCodeSize = CGSize(width: 27, height: 27)
-    
     /// Data contained in the generated QRCode
     public let data: NSData
     
@@ -75,9 +72,13 @@ public struct QRCode {
     /// The QRCode's UIImage representation
     public var image: UIImage? {
         guard let ciImage = ciImage else { return nil }
-        let context = CIContext(options: nil)
-        let cgimage = context.createCGImage(ciImage, fromRect: ciImage.extent)
-        return UIImage(CGImage: cgimage)
+        
+        // Size
+        let ciImageSize = ciImage.extent.size
+        let widthRatio = size.width / ciImageSize.width
+        let heightRatio = size.height / ciImageSize.height
+        
+        return ciImage.nonInterpolatedImage(withScale: Scale(dx: widthRatio, dy: heightRatio))
     }
     
     /// The QRCode's CIImage representation
@@ -97,13 +98,6 @@ public struct QRCode {
         colorFilter.setValue(color, forKey: "inputColor0")
         colorFilter.setValue(backgroundColor, forKey: "inputColor1")
         
-        // Size
-        let sizeRatioX = size.width / DefaultQRCodeSize.width
-        let sizeRatioY = size.height / DefaultQRCodeSize.height
-        let transform = CGAffineTransformMakeScale(sizeRatioX, sizeRatioY)
-        guard let transformedImage = colorFilter.outputImage?.imageByApplyingTransform(transform) else { return nil }
-        
-        return transformedImage
+        return colorFilter.outputImage
     }
-    
 }

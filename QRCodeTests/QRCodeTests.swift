@@ -80,4 +80,16 @@ class QRCodeTests: XCTestCase {
         XCTAssertEqual(size, qrCode!.size, "size is not equal")
     }
     
+    func testImageSize() {
+        let size = CGSize(width: 100, height: 100)
+        
+        var qrCode = QRCode("hello")
+        qrCode?.size = size
+        
+        let image = qrCode?.image
+        
+        XCTAssert(qrCode != nil, "QRCode is nil")
+        XCTAssert(image != nil, "image is nil")
+        XCTAssertEqual(image!.size, size)
+    }
 }
