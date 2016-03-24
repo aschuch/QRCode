@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/aschuch/QRCode.svg)](https://travis-ci.org/aschuch/QRCode)
 ![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
-![Swift 2](https://img.shields.io/badge/Swift-2-orange.svg)
+![Swift 2.2](https://img.shields.io/badge/Swift-2.2-orange.svg)
 
 A QRCode generator written in Swift.
 
@@ -68,7 +68,7 @@ In case you love emoji as much as I do, make sure to create your `QRCode` instan
 
 ```swift
 let qrCode = 🔳("http://example.com")
-``` 
+```
 
 ## Installation
 
