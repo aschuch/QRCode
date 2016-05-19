@@ -21,7 +21,7 @@ internal extension CIImage {
         let cgImage = CIContext(options: nil).createCGImage(self, fromRect: self.extent)
         let size = CGSize(width: self.extent.size.width * scale.dx, height: self.extent.size.height * scale.dy)
         
-        UIGraphicsBeginImageContext(size)
+        UIGraphicsBeginImageContextWithOptions(size, true, 0)
         let context = UIGraphicsGetCurrentContext()
         
         CGContextSetInterpolationQuality(context, .None)
