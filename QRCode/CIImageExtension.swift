@@ -1,6 +1,6 @@
 //
 //  CIImageExtension.swift
-//  Example
+//  QRCode
 //
 //  Created by Jaiouch Yaman - Société ID-APPS on 18/12/2015.
 //  Copyright © 2015 Alexander Schuch. All rights reserved.
