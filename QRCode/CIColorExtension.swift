@@ -25,10 +25,10 @@ public extension CIColor {
         var b: CGFloat = 0.0
         var a: CGFloat = 1.0
         
-        let scanner = NSScanner(string: rgba)
+        let scanner = Scanner(string: rgba)
         var hexValue: CUnsignedLongLong = 0
         
-        if scanner.scanHexLongLong(&hexValue) {
+        if scanner.scanHexInt64(&hexValue) {
             let length = rgba.characters.count
             
             switch (length) {
