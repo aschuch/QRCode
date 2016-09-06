@@ -14,9 +14,9 @@ Create a new QRCode representing a `NSURL`, a string or arbitrary data.
 The following examples all result in the same QRCode image.
 
 ```swift
-// NSURL
-let url = NSURL(string: "http://schuch.me")
-qrCode = QRCode(url)
+// URL
+let url = URL(string: "http://schuch.me")!
+let qrCode = QRCode(url)
 qrCode?.image
 
 // String
@@ -24,7 +24,7 @@ let qrCode = QRCode("http://schuch.me")
 qrCode?.image
 
 // NSData
-let data = "http://schuch.me".dataUsingEncoding(NSISOLatin1StringEncoding)
+let data = "http://schuch.me".data(using: .isoLatin1)!
 let qrCode = QRCode(data)
 qrCode.image
 ```
