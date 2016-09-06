@@ -39,7 +39,7 @@ class QRCodeTests: XCTestCase {
 
     func testInitWithURL() {
         let url = NSURL(string: "http://example.com")!
-        let data = url.absoluteString.dataUsingEncoding(NSISOLatin1StringEncoding)!
+        let data = url.absoluteString!.dataUsingEncoding(NSISOLatin1StringEncoding)!
         let qrCode = QRCode(url)
         
         XCTAssert(qrCode != nil, "QRCode is nil")

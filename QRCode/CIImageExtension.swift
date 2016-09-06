@@ -17,12 +17,12 @@ internal extension CIImage {
     /// - parameter withScale:  a given scale using to resize the result image
     ///
     /// - returns: an non-interpolated UIImage
-    internal func nonInterpolatedImage(withScale scale: Scale = Scale(dx: 1, dy: 1)) -> UIImage {
-        let cgImage = CIContext(options: nil).createCGImage(self, fromRect: self.extent)
+    internal func nonInterpolatedImage(withScale scale: Scale = Scale(dx: 1, dy: 1)) -> UIImage? {
+        guard let cgImage = CIContext(options: nil).createCGImage(self, fromRect: self.extent) else { return nil }
         let size = CGSize(width: self.extent.size.width * scale.dx, height: self.extent.size.height * scale.dy)
         
         UIGraphicsBeginImageContextWithOptions(size, true, 0)
-        let context = UIGraphicsGetCurrentContext()
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
         
         CGContextSetInterpolationQuality(context, .None)
         
