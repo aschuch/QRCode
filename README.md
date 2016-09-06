@@ -4,6 +4,10 @@
 ![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
 ![Swift 2.2](https://img.shields.io/badge/Swift-2.2-orange.svg)
 
+> This project is [Migrating to Swift 3](http://www.jessesquires.com/migrating-to-swift-3/).
+> * Swift 2.3 is currently available from the [`swift2.3` branch](https://github.com/aschuch/QRCode/tree/swift2.3)
+> * Swift 3.0 is currently available from the [`swift3.0` branch](https://github.com/aschuch/QRCode/tree/swift3.0)
+
 A QRCode generator written in Swift.
 
 ![QRCode Example](Resources/example.png)
