@@ -9,7 +9,7 @@ env:
   #- TVOS_FRAMEWORK_SCHEME="QRCode-tvOS"
   #- WATCHOS_FRAMEWORK_SCHEME="QRCode-watchOS"
   matrix:
-    - DESTINATION="OS=9.3,name=iPhone 6S"           SCHEME="$IOS_FRAMEWORK_SCHEME"      SDK="iphonesimulator9.3"
+    #- DESTINATION="OS=9.3,name=iPhone 6S"           SCHEME="$IOS_FRAMEWORK_SCHEME"      SDK="iphonesimulator9.3"
     - DESTINATION="OS=10.0,name=iPhone 6S"          SCHEME="$IOS_FRAMEWORK_SCHEME"      SDK="iphonesimulator10.0"
     #- DESTINATION="OS=9.2,name=Apple TV 1080p"      SCHEME="$TVOS_FRAMEWORK_SCHEME"     SDK="appletvsimulator9.2"
     #- DESTINATION="OS=2.2,name=Apple Watch - 42mm"  SCHEME="$WATCHOS_FRAMEWORK_SCHEME"  SDK="watchsimulator2.2"
