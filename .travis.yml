@@ -5,16 +5,16 @@ env:
   - LC_CTYPE=en_US.UTF-8
   - LANG=en_US.UTF-8
   - PROJECT=Example.xcodeproj
-  - IOS_FRAMEWORK_SCHEME="QRCode-iOS"
-  - TVOS_FRAMEWORK_SCHEME="QRCode-tvOS"
-  - WATCHOS_FRAMEWORK_SCHEME="QRCode-watchOS"
+  - IOS_FRAMEWORK_SCHEME="QRCode" # -iOS
+  #- TVOS_FRAMEWORK_SCHEME="QRCode-tvOS"
+  #- WATCHOS_FRAMEWORK_SCHEME="QRCode-watchOS"
   matrix:
     - DESTINATION="OS=9.3,name=iPhone 6S"           SCHEME="$IOS_FRAMEWORK_SCHEME"      SDK="iphonesimulator9.3"
-    - DESTINATION="OS=9.2,name=Apple TV 1080p"      SCHEME="$TVOS_FRAMEWORK_SCHEME"     SDK="appletvsimulator9.2"
-    - DESTINATION="OS=2.2,name=Apple Watch - 42mm"  SCHEME="$WATCHOS_FRAMEWORK_SCHEME"  SDK="watchsimulator2.2"
     - DESTINATION="OS=10.0,name=iPhone 6S"          SCHEME="$IOS_FRAMEWORK_SCHEME"      SDK="iphonesimulator10.0"
-    - DESTINATION="OS=10.0,name=Apple TV 1080p"     SCHEME="$TVOS_FRAMEWORK_SCHEME"     SDK="appletvsimulator10.0"
-    - DESTINATION="OS=3.0,name=Apple Watch - 42mm"  SCHEME="$WATCHOS_FRAMEWORK_SCHEME"  SDK="watchsimulator3.0"
+    #- DESTINATION="OS=9.2,name=Apple TV 1080p"      SCHEME="$TVOS_FRAMEWORK_SCHEME"     SDK="appletvsimulator9.2"
+    #- DESTINATION="OS=2.2,name=Apple Watch - 42mm"  SCHEME="$WATCHOS_FRAMEWORK_SCHEME"  SDK="watchsimulator2.2"
+    #- DESTINATION="OS=10.0,name=Apple TV 1080p"     SCHEME="$TVOS_FRAMEWORK_SCHEME"     SDK="appletvsimulator10.0"
+    #- DESTINATION="OS=3.0,name=Apple Watch - 42mm"  SCHEME="$WATCHOS_FRAMEWORK_SCHEME"  SDK="watchsimulator3.0"
 script:
   - set -o pipefail
   - xcodebuild -version
