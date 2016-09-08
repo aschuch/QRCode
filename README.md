@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/aschuch/QRCode.svg)](https://travis-ci.org/aschuch/QRCode)
 ![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
-![Swift 2.3](https://img.shields.io/badge/Swift-2.2-orange.svg)
+![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg)
 
 A QRCode generator written in Swift.
 
@@ -10,7 +10,7 @@ A QRCode generator written in Swift.
 
 ## Overview
 
-Create a new QRCode representing a `NSURL`, a string or arbitrary data.
+Create a new QRCode representing a `URL`, a string or arbitrary data.
 The following examples all result in the same QRCode image.
 
 ```swift
@@ -76,6 +76,7 @@ Current Swift compatibility breakdown:
 
 | Swift Version | Framework Version |
 | ------------- | ----------------- |
+| 3.0	        | master          	|
 | 2.3	        | 1.x          		|
 | 2.2           | 0.x          		|
 
@@ -98,7 +99,7 @@ Then run `carthage update`.
 Add the following line to your Podfile.
 
 ```
-pod "QRCode", "~> 0.5"
+pod "QRCode"
 ```
 
 Then run `pod install` with Cocoapods 0.36 or newer.
