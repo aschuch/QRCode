@@ -29,7 +29,7 @@ public struct QRCode {
     }
     
     /// Data contained in the generated QRCode
-    public let data: NSData
+    public let data: Data
     
     /// Foreground color of the output
     /// Defaults to black
@@ -47,20 +47,20 @@ public struct QRCode {
     
     // MARK: Init
     
-    public init(_ data: NSData) {
+    public init(_ data: Data) {
         self.data = data
     }
     
     public init?(_ string: String) {
-        if let data = string.dataUsingEncoding(NSISOLatin1StringEncoding) {
+        if let data = string.data(using: .isoLatin1) {
             self.data = data
         } else {
             return nil
         }
     }
     
-    public init?(_ url: NSURL) {
-        if let data = url.absoluteString?.dataUsingEncoding(NSISOLatin1StringEncoding) {
+    public init?(_ url: URL) {
+        if let data = url.absoluteString.data(using: .isoLatin1) {
             self.data = data
         } else {
             return nil
