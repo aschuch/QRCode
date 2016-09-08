@@ -2,13 +2,13 @@
 
 [![Build Status](https://travis-ci.org/aschuch/QRCode.svg)](https://travis-ci.org/aschuch/QRCode)
 ![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
-![Swift 2.2](https://img.shields.io/badge/Swift-2.2-orange.svg)
+![Swift 2.3](https://img.shields.io/badge/Swift-2.2-orange.svg)
 
 A QRCode generator written in Swift.
 
 ![QRCode Example](Resources/example.png)
 
-## Usage
+## Overview
 
 Create a new QRCode representing a `NSURL`, a string or arbitrary data.
 The following examples all result in the same QRCode image.
@@ -69,6 +69,17 @@ In case you love emoji as much as I do, make sure to create your `QRCode` instan
 ```swift
 let qrCode = 🔳("http://example.com")
 ```
+
+## Version Compatibility
+
+Current Swift compatibility breakdown:
+
+| Swift Version | Framework Version |
+| ------------- | ----------------- |
+| 2.3	        | 1.x          		|
+| 2.2           | 0.x          		|
+
+[all releases]: https://github.com/aschuch/QRCode/releases
 
 ## Installation
 
