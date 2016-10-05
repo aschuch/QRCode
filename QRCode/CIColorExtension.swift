@@ -6,7 +6,12 @@
 //  Copyright (c) 2015 Alexander Schuch. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#else
+    import Cocoa
+#endif
+
 
 public extension CIColor {
     

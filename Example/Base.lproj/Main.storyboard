@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,14 +15,13 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jd7-dt-8LC">
-                                <rect key="frame" x="132.5" y="188.5" width="335" height="222"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jd7-dt-8LC">
+                                <frame key="frameInset" minX="132.5" minY="188.5" width="335" height="222"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ldq-nY-0QF">
-                                        <rect key="frame" x="0.0" y="0.0" width="222" height="222"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="9jy-Mn-nqj"/>
                                             <constraint firstAttribute="height" constant="200" id="UnJ-fd-fo5"/>
@@ -35,42 +36,37 @@
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x8h-b6-iSb">
-                                        <rect key="frame" x="227" y="58" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="VSN-bQ-vav"/>
                                             <constraint firstAttribute="width" constant="50" id="woq-CJ-Nmx"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mcD-Bd-c7A">
-                                        <rect key="frame" x="285" y="58" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="P7V-Jh-Feh"/>
                                             <constraint firstAttribute="height" constant="50" id="or7-Dy-5CU"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q6v-7g-Eef">
-                                        <rect key="frame" x="227" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Ycs-Ue-ddL"/>
                                             <constraint firstAttribute="height" constant="50" id="hb4-G8-UGn"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J50-ki-XSt">
-                                        <rect key="frame" x="285" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="dXR-Kb-VTV"/>
                                             <constraint firstAttribute="width" constant="50" id="pQf-wu-uIX"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MJh-3G-Vw5">
-                                        <rect key="frame" x="227" y="114" width="108" height="108"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="108" id="P4o-cj-upB"/>
                                             <constraint firstAttribute="width" constant="108" id="XIk-sd-PFy"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="J50-ki-XSt" firstAttribute="top" secondItem="jd7-dt-8LC" secondAttribute="top" id="5m3-vz-bN6"/>
                                     <constraint firstItem="MJh-3G-Vw5" firstAttribute="top" secondItem="x8h-b6-iSb" secondAttribute="bottom" constant="6" id="9TR-oX-Azl"/>
@@ -92,7 +88,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="jd7-dt-8LC" secondAttribute="centerX" id="7jy-z8-Tvk"/>
                             <constraint firstAttribute="centerY" secondItem="jd7-dt-8LC" secondAttribute="centerY" id="mhm-cD-MLB"/>
