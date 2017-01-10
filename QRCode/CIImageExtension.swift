@@ -18,7 +18,7 @@ internal extension CIImage {
     ///
     /// - returns: an non-interpolated UIImage
     internal func nonInterpolatedImage(withScale scale: Scale = Scale(dx: 1, dy: 1)) -> UIImage? {
-        guard let cgImage = CIContext(options: nil).createCGImage(self, fromRect: self.extent) else { return nil }
+        let cgImage = CIContext(options: nil).createCGImage(self, fromRect: self.extent)
         let size = CGSize(width: self.extent.size.width * scale.dx, height: self.extent.size.height * scale.dy)
         
         UIGraphicsBeginImageContextWithOptions(size, true, 0)
