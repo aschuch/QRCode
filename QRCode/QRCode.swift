@@ -13,6 +13,8 @@ public typealias 🔳 = QRCode
 /// QRCode generator
 public struct QRCode {
     
+    public static var CIContextFactory:(()->CIContext)?
+    
     /**
     The level of error correction.
     
