@@ -18,7 +18,13 @@ internal extension CIImage {
     ///
     /// - returns: an non-interpolated UIImage
     internal func nonInterpolatedImage(withScale scale: Scale = Scale(dx: 1, dy: 1)) -> UIImage? {
-        guard let cgImage = CIContext(options: nil).createCGImage(self, from: self.extent) else { return nil }
+        var ciContext:CIContext?
+        if QRCode.CIContextFactory != nil {
+            ciContext = QRCode.CIContextFactory!()
+        }else{
+            ciContext = CIContext(options: nil)
+        }
+        guard let cgImage = ciContext?.createCGImage(self, from: self.extent) else { return nil }
         let size = CGSize(width: self.extent.size.width * scale.dx, height: self.extent.size.height * scale.dy)
         
         UIGraphicsBeginImageContextWithOptions(size, true, 0)
