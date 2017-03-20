@@ -54,6 +54,33 @@ qrCode.image // UIImage (green QRCode color and black background)
 
 > **Note**: The above examples make use of the `CIColor` extension that ships with this project to create colors based on HEX strings. 
 
+**Error Correction**
+
+QR codes support a configurable error correction setting. This controls how much of the generated image can be damaged or occluded, while still allowing for the code to be recognized correctly.
+
+To set error correction:
+
+```swift
+qrCode.errorCorrection = .High
+```
+
+If you do not declare this property, the default will be `.Low`.
+
+Valid values and the corresponding error correction ability are:
+
+| Parameter Val | Correction Ability |
+| ------------- | ------------------ |
+| Low	        | Approx 7%          |
+| Medium	    | Approx 15%         |
+| Quartile      | Approx 25%         |
+| High          | Approx 30%         |
+
+> For more information on Error Correction, see [QRcode.com](http://www.qrcode.com/en/about/error_correction.html).
+
+*Why would you want higher error correction?*
+
+Setting error correction above the default of Low allows you to create a QR code that can be damaged or covered but still scanned correctly. This allows for wear (if on a printed code) but also allows the use of graphics on top of the code. Therefore, QR codes can include a logo or other branding right over the qr code image (covering a part of it) and still will work. Note, however, that a higher amount of error correction also means that the QR code will be more "dense" (and therefore limits how small it might be printed/displayed.)
+
 ### UIImageView extension
 
 For convenience, a `UIImageView` extension is provided to directly initialize an image view with an instance of `QRCode`.
