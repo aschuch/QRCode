@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0702A7461E80ABB90077B944 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0702A7451E80ABB90077B944 /* UIImageExtension.swift */; };
 		4D248F0D1A751C3700E44E6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D248F0C1A751C3700E44E6B /* AppDelegate.swift */; };
 		4D248F0F1A751C3700E44E6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D248F0E1A751C3700E44E6B /* ViewController.swift */; };
 		4D248F121A751C3700E44E6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D248F101A751C3700E44E6B /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0702A7451E80ABB90077B944 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		4D248F071A751C3700E44E6B /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D248F0B1A751C3700E44E6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D248F0C1A751C3700E44E6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				4D9240651A7805310069D66D /* CIColorExtension.swift */,
 				AA24AF3D1C247A7C00D1BEC7 /* CIImageExtension.swift */,
 				4D248F351A751C7800E44E6B /* QRCode.h */,
+				0702A7451E80ABB90077B944 /* UIImageExtension.swift */,
 				4D248F331A751C7800E44E6B /* Supporting Files */,
 			);
 			path = QRCode;
@@ -347,6 +350,7 @@
 				4D9240641A78050C0069D66D /* UIImageViewExtension.swift in Sources */,
 				4D248F521A751CE300E44E6B /* QRCode.swift in Sources */,
 				AA24AF3E1C247A7C00D1BEC7 /* CIImageExtension.swift in Sources */,
+				0702A7461E80ABB90077B944 /* UIImageExtension.swift in Sources */,
 				4D9240661A7805310069D66D /* CIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
