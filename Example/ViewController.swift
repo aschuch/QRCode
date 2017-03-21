@@ -41,7 +41,6 @@ class ViewController: UIViewController {
             var qrCode = QRCode("http://github.com/aschuch/QRCode")!
             qrCode.size = self.imageViewLarge.bounds.size
             qrCode.errorCorrection = .High
-            qrCode.overlayImage = UIImage(named: "address-card")
             return qrCode.image
         }()
         
