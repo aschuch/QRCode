@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+import CoreImage
 
 internal typealias Scale = (dx: CGFloat, dy: CGFloat)
 
