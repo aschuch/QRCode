@@ -76,9 +76,9 @@ Current Swift compatibility breakdown:
 
 | Swift Version | Framework Version |
 | ------------- | ----------------- |
-| 3.0	        | 2.x          		|
-| 2.3	        | 1.x          		|
-| 2.2           | 0.x          		|
+| 3.0           | 2.x               |
+| 2.3           | 1.x               |
+| 2.2           | 0.x               |
 
 [all releases]: https://github.com/aschuch/QRCode/releases
 
