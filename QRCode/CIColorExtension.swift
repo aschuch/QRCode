@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Alexander Schuch. All rights reserved.
 //
 
-import UIKit
+import CoreImage
 
 public extension CIColor {
 
