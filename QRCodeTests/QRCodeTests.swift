@@ -6,7 +6,14 @@
 //  Copyright (c) 2015 Alexander Schuch. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#endif // iOS
+
+#if os(OSX)
+    import Cocoa
+#endif // macOS
+
 import XCTest
 @testable import QRCode
 

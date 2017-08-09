@@ -39,7 +39,7 @@ Change the output size of the QRCode output image via the `size` property.
 
 ```swift
 qrCode.size = CGSize(width: 300, height: 300)
-qrCode.image // UIImage (300x300)
+qrCode.image // UIImage/NSImage (300x300)
 ```
 
 **Color**
@@ -49,12 +49,12 @@ Modify the colors of the QRCode output image via `color` and `backgroundColor` p
 ```swift
 qrCode.color = CIColor(rgba: "16a085")
 qrCode.backgroundColor = CIColor(rgba: "000")
-qrCode.image // UIImage (green QRCode color and black background)
+qrCode.image // UIImage/NSImage (green QRCode color and black background)
 ```
 
 > **Note**: The above examples make use of the `CIColor` extension that ships with this project to create colors based on HEX strings.
 
-### UIImageView extension
+### UIImageView extension (iOS only)
 
 For convenience, a `UIImageView` extension is provided to directly initialize an image view with an instance of `QRCode`.
 

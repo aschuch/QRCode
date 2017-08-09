@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Alexander Schuch. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for QRCode.
 FOUNDATION_EXPORT double QRCodeVersionNumber;
