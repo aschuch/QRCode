@@ -9,7 +9,7 @@
 import UIKit
 
 public extension CIColor {
-    
+
     /// Creates a CIColor from an rgba string
     ///
     /// E.g.
@@ -24,13 +24,13 @@ public extension CIColor {
         var g: CGFloat = 0.0
         var b: CGFloat = 0.0
         var a: CGFloat = 1.0
-        
+
         let scanner = Scanner(string: rgba)
         var hexValue: CUnsignedLongLong = 0
-        
+
         if scanner.scanHexInt64(&hexValue) {
             let length = rgba.characters.count
-            
+
             switch (length) {
             case 3:
                 r = CGFloat((hexValue & 0xF00) >> 8)    / 15.0
@@ -53,12 +53,12 @@ public extension CIColor {
             default:
                 print("Invalid number of values (\(length)) in HEX string. Make sure to enter 3, 4, 6 or 8 values. E.g. `aabbccff`")
             }
-            
+
         } else {
             print("Invalid HEX value: \(rgba)")
         }
-        
+
         self.init(red: r, green: g, blue: b, alpha: a)
     }
-    
+
 }

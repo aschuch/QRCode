@@ -18,10 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageViewMedium: UIImageView!
     @IBOutlet weak var imageViewLarge: UIImageView!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+
         // large
         // default
         imageViewLarge.image = {
@@ -30,7 +29,7 @@ class ViewController: UIViewController {
             qrCode.errorCorrection = .High
             return qrCode.image
         }()
-        
+
         // medium
         // purple
         imageViewMedium.image = {
@@ -39,7 +38,7 @@ class ViewController: UIViewController {
             qrCode.color = CIColor(rgba: "8e44ad")
             return qrCode.image
         }()
-        
+
         // small
         // red (inverted)
         imageViewSmall1.image = {
@@ -49,7 +48,7 @@ class ViewController: UIViewController {
             qrCode.backgroundColor = CIColor(rgba: "e74c3c")
             return qrCode.image
         }()
-        
+
         // small
         // green
         imageViewSmall2.image = {
@@ -59,7 +58,7 @@ class ViewController: UIViewController {
             qrCode.backgroundColor = CIColor(rgba: "000")
             return qrCode.image
         }()
-        
+
         // small
         // orange
         imageViewSmall3.image = {
@@ -70,7 +69,6 @@ class ViewController: UIViewController {
             return qrCode.image
             }()
 
-        
         // small
         // blue
         imageViewSmall4.image = {
