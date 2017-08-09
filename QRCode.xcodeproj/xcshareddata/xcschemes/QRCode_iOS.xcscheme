@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4D248F301A751C7800E44E6B"
                BuildableName = "QRCode.framework"
-               BlueprintName = "QRCode"
+               BlueprintName = "QRCode_iOS"
                ReferencedContainer = "container:QRCode.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -35,7 +35,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4D248F3A1A751C7800E44E6B"
                BuildableName = "QRCodeTests.xctest"
-               BlueprintName = "QRCodeTests"
+               BlueprintName = "QRCodeTests_iOS"
                ReferencedContainer = "container:QRCode.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -45,7 +45,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4D248F301A751C7800E44E6B"
             BuildableName = "QRCode.framework"
-            BlueprintName = "QRCode"
+            BlueprintName = "QRCode_iOS"
             ReferencedContainer = "container:QRCode.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -67,7 +67,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4D248F301A751C7800E44E6B"
             BuildableName = "QRCode.framework"
-            BlueprintName = "QRCode"
+            BlueprintName = "QRCode_iOS"
             ReferencedContainer = "container:QRCode.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -85,7 +85,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4D248F301A751C7800E44E6B"
             BuildableName = "QRCode.framework"
-            BlueprintName = "QRCode"
+            BlueprintName = "QRCode_iOS"
             ReferencedContainer = "container:QRCode.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

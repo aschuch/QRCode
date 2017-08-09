@@ -115,7 +115,7 @@ Open the Xcode project and press `⌘-U` to run the tests.
 Alternatively, all tests can be run from the terminal using [xctool](https://github.com/facebook/xctool).
 
 ```bash
-xctool -scheme QRCodeTests -sdk iphonesimulator test
+xctool -scheme QRCodeTests_iOS -sdk iphonesimulator test
 ```
 
 ## Todo

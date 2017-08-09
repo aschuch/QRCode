@@ -104,7 +104,7 @@
 		4D248EFE1A751C3700E44E6B = {
 			isa = PBXGroup;
 			children = (
-				4D248F091A751C3700E44E6B /* Example */,
+				4D248F091A751C3700E44E6B /* Example_iOS */,
 				4D248F321A751C7800E44E6B /* QRCode */,
 				4D248F411A751C7800E44E6B /* QRCodeTests */,
 				4D248F081A751C3700E44E6B /* Products */,
@@ -121,7 +121,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4D248F091A751C3700E44E6B /* Example */ = {
+		4D248F091A751C3700E44E6B /* Example_iOS */ = {
 			isa = PBXGroup;
 			children = (
 				4D248F0C1A751C3700E44E6B /* AppDelegate.swift */,
@@ -131,7 +131,7 @@
 				4D248F151A751C3700E44E6B /* LaunchScreen.xib */,
 				4D248F0A1A751C3700E44E6B /* Supporting Files */,
 			);
-			path = Example;
+			path = Example_iOS;
 			sourceTree = "<group>";
 		};
 		4D248F0A1A751C3700E44E6B /* Supporting Files */ = {
@@ -194,9 +194,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4D248F061A751C3700E44E6B /* Example */ = {
+		4D248F061A751C3700E44E6B /* Example_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D248F261A751C3700E44E6B /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = 4D248F261A751C3700E44E6B /* Build configuration list for PBXNativeTarget "Example_iOS" */;
 			buildPhases = (
 				4D248F031A751C3700E44E6B /* Sources */,
 				4D248F041A751C3700E44E6B /* Frameworks */,
@@ -208,14 +208,14 @@
 			dependencies = (
 				4D248F471A751C7800E44E6B /* PBXTargetDependency */,
 			);
-			name = Example;
+			name = Example_iOS;
 			productName = Example;
 			productReference = 4D248F071A751C3700E44E6B /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4D248F301A751C7800E44E6B /* QRCode */ = {
+		4D248F301A751C7800E44E6B /* QRCode_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D248F4A1A751C7800E44E6B /* Build configuration list for PBXNativeTarget "QRCode" */;
+			buildConfigurationList = 4D248F4A1A751C7800E44E6B /* Build configuration list for PBXNativeTarget "QRCode_iOS" */;
 			buildPhases = (
 				4D248F2C1A751C7800E44E6B /* Sources */,
 				4D248F2D1A751C7800E44E6B /* Frameworks */,
@@ -226,14 +226,14 @@
 			);
 			dependencies = (
 			);
-			name = QRCode;
+			name = QRCode_iOS;
 			productName = QRCode;
 			productReference = 4D248F311A751C7800E44E6B /* QRCode.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4D248F3A1A751C7800E44E6B /* QRCodeTests */ = {
+		4D248F3A1A751C7800E44E6B /* QRCodeTests_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D248F4E1A751C7800E44E6B /* Build configuration list for PBXNativeTarget "QRCodeTests" */;
+			buildConfigurationList = 4D248F4E1A751C7800E44E6B /* Build configuration list for PBXNativeTarget "QRCodeTests_iOS" */;
 			buildPhases = (
 				4D248F371A751C7800E44E6B /* Sources */,
 				4D248F381A751C7800E44E6B /* Frameworks */,
@@ -244,7 +244,7 @@
 			dependencies = (
 				4D248F3E1A751C7800E44E6B /* PBXTargetDependency */,
 			);
-			name = QRCodeTests;
+			name = QRCodeTests_iOS;
 			productName = QRCodeTests;
 			productReference = 4D248F3B1A751C7800E44E6B /* QRCodeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -288,9 +288,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4D248F061A751C3700E44E6B /* Example */,
-				4D248F301A751C7800E44E6B /* QRCode */,
-				4D248F3A1A751C7800E44E6B /* QRCodeTests */,
+				4D248F061A751C3700E44E6B /* Example_iOS */,
+				4D248F301A751C7800E44E6B /* QRCode_iOS */,
+				4D248F3A1A751C7800E44E6B /* QRCodeTests_iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -356,12 +356,12 @@
 /* Begin PBXTargetDependency section */
 		4D248F3E1A751C7800E44E6B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4D248F301A751C7800E44E6B /* QRCode */;
+			target = 4D248F301A751C7800E44E6B /* QRCode_iOS */;
 			targetProxy = 4D248F3D1A751C7800E44E6B /* PBXContainerItemProxy */;
 		};
 		4D248F471A751C7800E44E6B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4D248F301A751C7800E44E6B /* QRCode */;
+			target = 4D248F301A751C7800E44E6B /* QRCode_iOS */;
 			targetProxy = 4D248F461A751C7800E44E6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -477,11 +477,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_FILE = Example_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aschuch.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aschuch.Example.iOS;
+				PRODUCT_NAME = Example;
 				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
@@ -490,11 +490,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_FILE = Example_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aschuch.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aschuch.Example.iOS;
+				PRODUCT_NAME = Example;
 				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
@@ -513,8 +513,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aschuch.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aschuch.$(PRODUCT_NAME:rfc1034identifier).iOS";
+				PRODUCT_NAME = QRCode;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0.1;
@@ -538,8 +538,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aschuch.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aschuch.$(PRODUCT_NAME:rfc1034identifier).iOS";
+				PRODUCT_NAME = QRCode;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -554,8 +554,8 @@
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = QRCodeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aschuch.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aschuch.$(PRODUCT_NAME:rfc1034identifier).iOS";
+				PRODUCT_NAME = QRCodeTests;
 				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
@@ -566,8 +566,8 @@
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = QRCodeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aschuch.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aschuch.$(PRODUCT_NAME:rfc1034identifier).iOS";
+				PRODUCT_NAME = QRCodeTests;
 				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
@@ -584,7 +584,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D248F261A751C3700E44E6B /* Build configuration list for PBXNativeTarget "Example" */ = {
+		4D248F261A751C3700E44E6B /* Build configuration list for PBXNativeTarget "Example_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D248F271A751C3700E44E6B /* Debug */,
@@ -593,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D248F4A1A751C7800E44E6B /* Build configuration list for PBXNativeTarget "QRCode" */ = {
+		4D248F4A1A751C7800E44E6B /* Build configuration list for PBXNativeTarget "QRCode_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D248F4B1A751C7800E44E6B /* Debug */,
@@ -602,7 +602,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D248F4E1A751C7800E44E6B /* Build configuration list for PBXNativeTarget "QRCodeTests" */ = {
+		4D248F4E1A751C7800E44E6B /* Build configuration list for PBXNativeTarget "QRCodeTests_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D248F4F1A751C7800E44E6B /* Debug */,
