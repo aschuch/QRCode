@@ -31,13 +31,6 @@
 			remoteGlobalIDString = 4D248F301A751C7800E44E6B;
 			remoteInfo = QRCode;
 		};
-		4D248F3F1A751C7800E44E6B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D248EFF1A751C3700E44E6B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4D248F061A751C3700E44E6B;
-			remoteInfo = Example;
-		};
 		4D248F461A751C7800E44E6B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D248EFF1A751C3700E44E6B /* Project object */;
@@ -250,7 +243,6 @@
 			);
 			dependencies = (
 				4D248F3E1A751C7800E44E6B /* PBXTargetDependency */,
-				4D248F401A751C7800E44E6B /* PBXTargetDependency */,
 			);
 			name = QRCodeTests;
 			productName = QRCodeTests;
@@ -366,11 +358,6 @@
 			isa = PBXTargetDependency;
 			target = 4D248F301A751C7800E44E6B /* QRCode */;
 			targetProxy = 4D248F3D1A751C7800E44E6B /* PBXContainerItemProxy */;
-		};
-		4D248F401A751C7800E44E6B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4D248F061A751C3700E44E6B /* Example */;
-			targetProxy = 4D248F3F1A751C7800E44E6B /* PBXContainerItemProxy */;
 		};
 		4D248F471A751C7800E44E6B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -570,7 +557,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aschuch.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0.1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};
 			name = Debug;
 		};
@@ -583,7 +569,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aschuch.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0.1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};
 			name = Release;
 		};
