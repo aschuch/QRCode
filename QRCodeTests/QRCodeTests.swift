@@ -92,4 +92,37 @@ class QRCodeTests: XCTestCase {
         XCTAssert(image != nil, "image is nil")
         XCTAssertEqual(image!.size, size)
     }
+
+    func testCapacity() {
+        let limitBytes = 2953
+
+        let maximumBytes = randomBytes(count: limitBytes)!
+        let tooManyBytes = randomBytes(count: limitBytes + 1)!
+
+        let codeWithMaximumBytes = QRCode(maximumBytes)
+        let codeWithTooManyBytes = QRCode(tooManyBytes)
+
+        XCTAssertEqual(maximumBytes, codeWithMaximumBytes.data, "data is not equal")
+        XCTAssertEqual(tooManyBytes, codeWithTooManyBytes.data, "data is not equal")
+
+        XCTAssertNotNil(codeWithMaximumBytes.image)
+        XCTAssertNil(codeWithTooManyBytes.image)
+    }
+}
+
+// MARK: - Helpers
+
+func randomBytes(count: Int) -> Data? {
+    var bytes = Data(count: count)
+    let status = bytes.withUnsafeMutableBytes {
+        bytesPtr in
+
+        SecRandomCopyBytes(kSecRandomDefault, bytes.count, bytesPtr)
+    }
+
+    guard status == errSecSuccess else {
+        return nil
+    }
+
+    return bytes
 }
