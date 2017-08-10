@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4D248F301A751C7800E44E6B"
-               BuildableName = "QRCode.framework"
-               BlueprintName = "QRCode"
-               ReferencedContainer = "container:Example.xcodeproj">
+               BlueprintIdentifier = "60940D011F3B814300725D98"
+               BuildableName = "Example.app"
+               BlueprintName = "Example_macOS"
+               ReferencedContainer = "container:QRCode.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,20 +33,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4D248F3A1A751C7800E44E6B"
+               BlueprintIdentifier = "60940CE81F3B75AB00725D98"
                BuildableName = "QRCodeTests.xctest"
-               BlueprintName = "QRCodeTests"
-               ReferencedContainer = "container:Example.xcodeproj">
+               BlueprintName = "QRCodeTests_macOS"
+               ReferencedContainer = "container:QRCode.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D248F301A751C7800E44E6B"
-            BuildableName = "QRCode.framework"
-            BlueprintName = "QRCode"
-            ReferencedContainer = "container:Example.xcodeproj">
+            BlueprintIdentifier = "60940D011F3B814300725D98"
+            BuildableName = "Example.app"
+            BlueprintName = "Example_macOS"
+            ReferencedContainer = "container:QRCode.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -62,15 +62,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D248F301A751C7800E44E6B"
-            BuildableName = "QRCode.framework"
-            BlueprintName = "QRCode"
-            ReferencedContainer = "container:Example.xcodeproj">
+            BlueprintIdentifier = "60940D011F3B814300725D98"
+            BuildableName = "Example.app"
+            BlueprintName = "Example_macOS"
+            ReferencedContainer = "container:QRCode.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,15 +81,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D248F301A751C7800E44E6B"
-            BuildableName = "QRCode.framework"
-            BlueprintName = "QRCode"
-            ReferencedContainer = "container:Example.xcodeproj">
+            BlueprintIdentifier = "60940D011F3B814300725D98"
+            BuildableName = "Example.app"
+            BlueprintName = "Example_macOS"
+            ReferencedContainer = "container:QRCode.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
