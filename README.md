@@ -1,8 +1,8 @@
 # QRCode 🔳
 
-[![Build Status](https://travis-ci.org/aschuch/QRCode.svg)](https://travis-ci.org/aschuch/QRCode)
+[![Build Status](https://travis-ci.org/ekscrypto/QRCode.svg)](https://travis-ci.org/ekscrypto/QRCode)
 ![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
-![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg)
+![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)
 
 A QRCode generator written in Swift.
 
@@ -54,6 +54,33 @@ qrCode.image // UIImage (green QRCode color and black background)
 
 > **Note**: The above examples make use of the `CIColor` extension that ships with this project to create colors based on HEX strings. 
 
+**Error Correction**
+
+QR codes support a configurable error correction setting. This controls how much of the generated image can be damaged or occluded, while still allowing for the code to be recognized correctly.
+
+To set error correction:
+
+```swift
+qrCode.errorCorrection = .High
+```
+
+If you do not declare this property, the default will be `.Low`.
+
+Valid values and the corresponding error correction ability are:
+
+| Parameter Val | Correction Ability |
+| ------------- | ------------------ |
+| Low	        | Approx 7%          |
+| Medium	    | Approx 15%         |
+| Quartile      | Approx 25%         |
+| High          | Approx 30%         |
+
+> For more information on Error Correction, see [QRcode.com](http://www.qrcode.com/en/about/error_correction.html).
+
+*Why would you want higher error correction?*
+
+Setting error correction above the default of Low allows you to create a QR code that can be damaged or covered but still scanned correctly. This allows for wear (if on a printed code) but also allows the use of graphics on top of the code. Therefore, QR codes can include a logo or other branding right over the qr code image (covering a part of it) and still will work. Note, however, that a higher amount of error correction also means that the QR code will be more "dense" (and therefore limits how small it might be printed/displayed.)
+
 ### UIImageView extension
 
 For convenience, a `UIImageView` extension is provided to directly initialize an image view with an instance of `QRCode`.
@@ -76,11 +103,12 @@ Current Swift compatibility breakdown:
 
 | Swift Version | Framework Version |
 | ------------- | ----------------- |
-| 3.0	        | 2.x          		|
+| 4.0	        | 2.0.1        		|
+| 3.0	        | 2.0          		|
 | 2.3	        | 1.x          		|
 | 2.2           | 0.x          		|
 
-[all releases]: https://github.com/aschuch/QRCode/releases
+[all releases]: https://github.com/ekscrypto/QRCode/releases
 
 ## Installation
 
@@ -89,7 +117,7 @@ Current Swift compatibility breakdown:
 Add the following line to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
 
 ```
-github "aschuch/QRCode"
+github "ekscrypto/QRCode"
 ```
 
 Then run `carthage update`.
@@ -99,10 +127,10 @@ Then run `carthage update`.
 Add the following line to your Podfile.
 
 ```
-pod "QRCode"
+pod "QRCode", :git => "https://github.com/ekscrypto/QRCode.git"
 ```
 
-Then run `pod install` with Cocoapods 0.36 or newer.
+Then run `pod install` with Cocoapods 1.5.3 or newer.
 
 #### Manually
 
@@ -137,5 +165,11 @@ xctool -scheme QRCodeTests -sdk iphonesimulator test
 
 Feel free to get in touch.
 
+Original author:
 * Website: <http://schuch.me>
 * Twitter: [@schuchalexander](http://twitter.com/schuchalexander)
+
+Latest updates:
+* Website: <http://soft.io>
+* Twitter: [@ekscrypto](https://twitter.com/ekscrypto)
+
